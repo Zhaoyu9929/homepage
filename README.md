@@ -1,6 +1,8 @@
 - 👋 Hi, I’m Zhaoyu 
 - 👀 I’m interested in e-mobility.
 - 🌱 I’m currently learning deep learning
+- My respository will show my learning process of coding.
+- Welcome.
 
 
 <!---
