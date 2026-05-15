@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人空间</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════════ 登录页 ══════════════ -->
+<div id="login-screen" style="display:none">
+  <div class="login-card">
+    <div class="login-lock">🔐</div>
+    <h1 class="login-title">个人空间</h1>
+    <p class="login-subtitle">仅限本人访问</p>
+    <form id="login-form">
+      <input type="password" id="pwd-input" placeholder="请输入密码" autocomplete="current-password">
+      <button type="submit">进入 →</button>
+    </form>
+    <p id="login-error"></p>
+  </div>
+</div>
+
+<!-- ══════════════ 仪表盘 ══════════════ -->
+<div id="dashboard" class="hidden">
+
+  <!-- 顶部导航 -->
+  <header class="header">
+    <div class="header-left">
+      <span id="greeting-text">你好，</span>
+      <span class="header-name" id="header-name">—</span>
+    </div>
+    <div class="header-right">
+      <span id="datetime-display"></span>
+      <button class="logout-btn" id="logout-btn">退出</button>
+    </div>
+  </header>
+
+  <!-- 主内容 -->
+  <main class="main-grid">
+
+    <!-- 个人简介 -->
+    <div class="card card-profile">
+      <div class="profile-avatar" id="profile-avatar">🙂</div>
+      <div class="profile-name"  id="profile-name">你的名字</div>
+      <div class="profile-title" id="profile-title">职业 · 身份</div>
+      <div class="profile-divider"></div>
+      <p class="profile-bio" id="profile-bio">个人简介</p>
+    </div>
+
+    <!-- 当前专注 & 目标进度 -->
+    <div class="card card-goals">
+      <div class="card-header">
+        <span class="card-icon">🎯</span>
+        <h3>当前专注</h3>
+      </div>
+      <div class="focus-banner" id="focus-text">加载中…</div>
+      <div class="goals-list" id="goals-list"></div>
+    </div>
+
+    <!-- 今日任务 -->
+    <div class="card card-tasks">
+      <div class="card-header">
+        <span class="card-icon">✅</span>
+        <h3>今日任务</h3>
+        <span class="badge" id="task-count">0 / 0</span>
+      </div>
+      <div class="tasks-list" id="tasks-list"></div>
+    </div>
+
+    <!-- Google 日历 -->
+    <div class="card card-calendar">
+      <div class="card-header">
+        <span class="card-icon">📅</span>
+        <h3>Google 日历</h3>
+      </div>
+      <div id="calendar-area">
+        <div class="cal-setup">
+          <strong>如何连接 Google 日历：</strong><br>
+          1. 打开 Google 日历网页版<br>
+          2. 点击某个日历右侧 ⋮ → <em>设置和共享</em><br>
+          3. 找到「嵌入代码」→ 复制 <code>src="..."</code> 中的链接<br>
+          4. 粘贴到 <code>data/config.json</code> 的 <code>calendar_embed_url</code> 字段
+        </div>
+      </div>
+    </div>
+
+    <!-- 日志（来自苹果备忘录） -->
+    <div class="card card-journal">
+      <div class="card-header">
+        <span class="card-icon">📝</span>
+        <h3>近期日志</h3>
+        <span class="badge">来自备忘录</span>
+      </div>
+      <div class="journal-grid" id="journal-grid"></div>
+    </div>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

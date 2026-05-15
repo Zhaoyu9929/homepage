@@ -1,0 +1,8 @@
+{
+  "focus": "在这里写你现在最专注、最重要的一件事",
+  "goals": [
+    { "title": "目标一（例：完成项目方案）", "progress": 60, "category": "工作" },
+    { "title": "目标二（例：每天阅读30分钟）", "progress": 40, "category": "学习" },
+    { "title": "目标三（例：坚持健身）", "progress": 75, "category": "生活" }
+  ]
+}

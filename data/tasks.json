@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    { "id": 1, "text": "任务示例一", "done": false, "date": "2026-05-15" },
+    { "id": 2, "text": "任务示例二", "done": false, "date": "2026-05-15" },
+    { "id": 3, "text": "任务示例三", "done": true,  "date": "2026-05-15" }
+  ]
+}
